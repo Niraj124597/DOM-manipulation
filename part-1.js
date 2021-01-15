@@ -25,6 +25,7 @@ headerTitle.innerText = 'Goodbye';
 headerTitle.innerHTML = '<h6>Hello</h6>';
 
 var header = document.getElementById('main-header');
+console.log(header);
 header.style.borderBottom = '3px solid red';
 
 // getElementsByClass
@@ -44,16 +45,6 @@ for (var i = 0; i < items.length; i++) {
 }
 
 // getElementsByTagName
-var headerTitle = document.getElementById('header-title');
-console.log(headerTitle);
-headerTitle.textContent = 'Hello';
-headerTitle.innerText = 'Goodbye';
-headerTitle.innerHTML = '<h6>Hello</h6>';
-
-var header = document.getElementById('main-header');
-header.style.borderBottom = '3px solid red';
-
-// getElementsByClass
 var lists = document.getElementsByTagName('li');
 console.log(lists);
 console.log(lists[2]);
@@ -74,25 +65,38 @@ var header = document.querySelector('#main-header');
 console.log(header);
 header.style.borderBottom = '3px solid #34EBCC';
 
+var newHeaderTitle = document.querySelector('#main-header .container');
+console.log(newHeaderTitle);
+
+// Alternative
+var newHeaderTitle = document.querySelector('header .container');
+console.log(newHeaderTitle);
+
 var formControl = document.querySelector('.form-control');
+console.log(formControl);
 formControl.value = 'Hello World';
 
 // Alternative
 // We have two input elements but querySelector selects the first element only
 var input = document.querySelector('input');
+console.log(input);
 input.value = 'Hi there!';
 
-var sumbit = document.querySelector('input[type="submit"]');
-sumbit.value = 'Send';
+var submit = document.querySelector('input[type="submit"]');
+console.log(submit);
+submit.value = 'Send';
 
 var item = document.querySelector('.list-group-item');
+console.log(item);
 // Because the querySelector selects the first item only
 item.style.color = 'red'; 
 
 var lastItem = document.querySelector('.list-group-item:last-child');
+console.log(lastItem);
 lastItem.style.color = 'green';
 
 var secondItem = document.querySelector('.list-group-item:nth-child(2)');
+console.log(secondItem);
 secondItem.style.color = 'white';
 
 // querySelectorAll
@@ -102,6 +106,7 @@ h2[0].textContent = 'Add Items - Updated';
 
 // Alternative 
 var titles = document.querySelectorAll('.title');
+console.log(titles);
 titles[1].textContent = 'Items - Updated';
 
 var odd = document.querySelectorAll('li:nth-child(odd)');
@@ -113,5 +118,3 @@ for (var i = 0; i < odd.length; i++) {
   odd[i].style.backgroundColor = '#f4f4f4';
   even[i].style.backgroundColor = '#ccc';
 }
-
-
